@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LocalizationService } from './core/services/localization/localization.service';
 import { LayoutModule } from './layout/layout.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LayoutModule } from './layout/layout.module';
         useFactory: LocalizationService.httpLoaderFactory,
         deps: [HttpClient]
       },
-    })
+    }),
+    FontAwesomeModule
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent]
