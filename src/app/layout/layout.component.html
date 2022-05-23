@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="(this.theme$ | async) as theme" [ngClass]="theme">
     <div class="inner-container">
         <div class="navbar">
             <app-navbar></app-navbar>

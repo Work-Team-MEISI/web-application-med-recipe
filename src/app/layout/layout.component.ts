@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ThemeService } from '../core/services/theme/theme.service';
+import { ThemeCollection } from '../shared/constants/theme.collection';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent {
 
-  constructor() { }
+  constructor(
+    private readonly _themeService: ThemeService,
+  ) { }
 
-  ngOnInit(): void {
+  /** Getters */
+
+  public get theme$(): Observable<ThemeCollection> {
+    return this._themeService.state$;
   }
 
 }
