@@ -6,6 +6,7 @@ import { LanguageSwitcherMenuComponent } from './components/menus/language-switc
 import { MaxScreenLoaderAnimationComponent } from './components/animations/max-screen-loader-animation/max-screen-loader-animation.component';
 import { CoreModule } from '../core/core.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TranslateModule,
     FontAwesomeModule,
     CoreModule,
+    ReactiveFormsModule,
   ],
   exports: [
     TranslateModule,
@@ -25,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LanguageSwitcherMenuComponent,
     CoreModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule { }

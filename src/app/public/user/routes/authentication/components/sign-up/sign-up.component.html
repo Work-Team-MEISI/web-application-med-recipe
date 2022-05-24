@@ -1,1 +1,40 @@
-<p>sign-up works!</p>
+<div class="container">
+    <div class="inner-container">
+        <form class="form" [formGroup]="this.formGroup">
+            <div class="form-control">
+                <label for="form-control-username">
+                    {{ this.localeService.signUpFormUsernameLabelLocale | translate }}
+                </label>
+                <input type="text" formControlName="username">
+            </div>
+            <div class="form-control">
+                <label for="form-control-email">
+                    {{ this.localeService.signUpFormEmailLabelLocale | translate }}
+                </label>
+                <input type="email" formControlName="email">
+            </div>
+            <div class="form-control">
+                <label for="form-control-firstName">
+                    {{ this.localeService.signUpFormFirstNameLabelLocale | translate }}
+                </label>
+                <input type="text" formControlName="firstName">
+            </div>
+            <div class="form-control">
+                <label for="form-control-lastName">
+                    {{ this.localeService.signUpFormLastNameLabelLocale | translate }}
+                </label>
+                <input type="text" formControlName="lastName">
+            </div>
+            <div class="form-control">
+                <label for="form-control-password">
+                    {{ this.localeService.signUpFormPasswordLabelLocale | translate }}
+                </label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="form-control">
+                <button (click)="this.save()" [disabled]="this.isFormValid() === false"> {{
+                    this.localeService.buttonLocale | translate}} </button>
+            </div>
+        </form>
+    </div>
+</div>

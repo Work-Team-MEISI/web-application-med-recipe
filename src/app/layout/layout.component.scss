@@ -9,12 +9,12 @@
         width: inherit;
 
         .navbar {
-            height: auto;
+            height: 80px;
             width: inherit;
         }
 
         .content {
-            height: auto;
+            min-height: calc(100vh - 80px);
             width: inherit;
         }
     }

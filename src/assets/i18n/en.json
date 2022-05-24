@@ -1,3 +1,47 @@
 {
-    "BRAND": "Med Recipe"
+    "BRAND": "Med Recipe",
+    "BUTTON": "Save",
+    "CONTENT": {
+        "USERS": {
+            "AUTHENTICATION": {
+                "SIGN_IN_FORM": {
+                    "FORM_CONTROL": {
+                        "EMAIL": {
+                            "LABEL": "Email"
+                        },
+                        "PASSWORD": {
+                            "LABEL": "Password"
+                        }
+                    }
+                },
+                "SIGN_UP_FORM": {
+                    "FORM_CONTROL": {
+                        "USERNAME": {
+                            "LABEL": "Username"
+                        },
+                        "EMAIL": {
+                            "LABEL": "Email"
+                        },
+                        "FIRST_NAME": {
+                            "LABEL": "First Name"
+                        },
+                        "LAST_NAME": {
+                            "LABEL": "Last Name"
+                        },
+                        "PASSWORD": {
+                            "LABEL": "Password"
+                        }
+                    }
+                },
+                "FORGOT_PASSWORD_FORM": {
+                    "FORM_CONTROL": {
+                        "EMAIL": {
+                            "LABEL": "Email"
+                        }
+                    }
+                }
+            },
+            "PROFILE": {}
+        }
+    }
 }

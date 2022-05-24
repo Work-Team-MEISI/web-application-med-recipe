@@ -1,1 +1,22 @@
-<p>sign-in works!</p>
+<div class="container">
+    <div class="inner-container">
+        <form class="form" [formGroup]="this.formGroup">
+            <div class="form-control">
+                <label for="form-control-email">
+                    {{ this.localeService.signInFormEmailLabelLocale | translate }}
+                </label>
+                <input type="email" formControlName="email">
+            </div>
+            <div class="form-control">
+                <label for="form-control-password">
+                    {{ this.localeService.signInFormPasswordLabelLocale | translate }}
+                </label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="form-control">
+                <button (click)="this.save()" [disabled]="this.isFormValid() === false"> {{
+                    this.localeService.buttonLocale | translate}} </button>
+            </div>
+        </form>
+    </div>
+</div>

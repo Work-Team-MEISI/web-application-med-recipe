@@ -1,0 +1,11 @@
+:host {
+    min-height: inherit;
+}
+
+.container {
+    min-height: inherit;
+
+    .inner-container {
+        min-height: inherit;
+    }
+}
