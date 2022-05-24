@@ -10,7 +10,9 @@ export class LocaleService {
   private readonly _locales: Array<LocaleModel>;
 
   constructor() {
-    this._locales = new Array<LocaleModel>();
+    this._locales = new Array<LocaleModel>(
+      { name: LocaleCollection.BRAND, path: "BRAND" },
+    );
   }
 
   /** Utility */

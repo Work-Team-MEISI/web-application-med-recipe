@@ -1,1 +1,17 @@
-<p>navbar works!</p>
+<div class="container">
+    <div class="inner-container">
+        <div class="col">
+            <span> {{ this.localeService.brandLocale | translate }} </span>
+        </div>
+        <div class="col">
+            <div class="col">
+                <fa-icon [icon]="this.iconService.userIcon"></fa-icon>
+            </div>
+            <div class="divider"></div>
+            <div class="col">
+                <fa-icon [icon]="this.iconService.themeIcon"></fa-icon>
+                <fa-icon [icon]="this.iconService.languageIcon"></fa-icon>
+            </div>
+        </div>
+    </div>
+</div>

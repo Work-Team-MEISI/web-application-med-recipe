@@ -1,0 +1,36 @@
+.container {
+    width: 100vw;
+    height: auto;
+
+    .inner-container {
+        padding: 28px 16px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .col {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .divider {
+                height: 24px;
+                width: 0.5px;
+
+                margin: 0px 16px;
+
+                background-color: lightgray;
+            }
+
+            .col {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+    }
+}
