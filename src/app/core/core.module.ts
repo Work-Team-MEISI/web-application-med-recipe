@@ -8,12 +8,14 @@ import { CookieStorageService } from './services/storage/cookie-storage/cookie-s
 import { LocaleService } from './services/locale/locale.service';
 import { LocalizationService } from './services/localization/localization.service';
 import { ThemeService } from './services/theme/theme.service';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: [
     HttpService,
@@ -23,6 +25,9 @@ import { ThemeService } from './services/theme/theme.service';
     LocaleService,
     LocalizationService,
     ThemeService
+  ],
+  exports: [
+    AngularMaterialModule,
   ]
 })
 export class CoreModule { }

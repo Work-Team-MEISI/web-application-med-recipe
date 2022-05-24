@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LocalizationService } from './core/services/localization/localization.service';
 import { LayoutModule } from './layout/layout.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         deps: [HttpClient]
       },
     }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent]

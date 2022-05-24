@@ -1,0 +1,6 @@
+<fa-icon mat-button [matMenuTriggerFor]="themeSwitcherMenu" [icon]="this.iconService.themeIcon"></fa-icon>
+<mat-menu #themeSwitcherMenu="matMenu">
+    <button mat-menu-item *ngFor="let theme of this.themes">
+        {{ this.themeService.beautifySelectedThemeName(theme) }}
+    </button>
+</mat-menu>

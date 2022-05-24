@@ -59,4 +59,16 @@ export class ThemeService implements OnDestroy {
   public updateTheme(theme: ThemeCollection): void {
     return this._state.next(theme);
   }
+
+  /**
+   * Splits the name of the selected theme;
+   * Beautifies the name by returning only the theme name;
+   * 
+   * @param themeName 
+   * @returns 
+   */
+  public beautifySelectedThemeName(themeName: ThemeCollection): string {
+    return themeName.split("-")[0];
+  }
+
 }
