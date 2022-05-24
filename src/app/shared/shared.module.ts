@@ -11,7 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     ThemeSwitcherMenuComponent,
     LanguageSwitcherMenuComponent,
-    MaxScreenLoaderAnimationComponent
+    MaxScreenLoaderAnimationComponent,
   ],
   imports: [
     CommonModule,
