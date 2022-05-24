@@ -9,6 +9,7 @@ import { LocalizationService } from './core/services/localization/localization.s
 import { LayoutModule } from './layout/layout.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PublicModule } from './public/public.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
+    PublicModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
