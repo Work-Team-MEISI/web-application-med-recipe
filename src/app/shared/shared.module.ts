@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   exports: [
     TranslateModule,
     ThemeSwitcherMenuComponent,
+    LanguageSwitcherMenuComponent,
     CoreModule,
     FontAwesomeModule,
   ]

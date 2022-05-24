@@ -43,6 +43,10 @@ export class ThemeService implements OnDestroy {
   private _initializeBaseTheme(): ThemeCollection {
     const theme = this._storageService.fetchToken<ThemeCollection>(TokenCollection.THEME);
 
+    if (theme === null) {
+      this._storageService.createToken(TokenCollection.THEME, ThemeCollection.DARK_THEME);
+    }
+
     return theme !== null ? theme : ThemeCollection.DARK_THEME;
   }
 
@@ -57,6 +61,7 @@ export class ThemeService implements OnDestroy {
    * @returns 
    */
   public updateTheme(theme: ThemeCollection): void {
+    this._storageService.createToken(TokenCollection.THEME, theme);
     return this._state.next(theme);
   }
 

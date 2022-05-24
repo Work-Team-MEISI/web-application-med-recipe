@@ -1,1 +1,7 @@
-<p>language-switcher-menu works!</p>
+<fa-icon mat-button [matMenuTriggerFor]="languageSwitcherMenu" [icon]="this.iconService.languageIcon"></fa-icon>
+<mat-menu #languageSwitcherMenu="matMenu">
+    <button mat-menu-item *ngFor="let language of this.languages"
+        (click)="this.localizationService.updateLanguage(language)">
+        {{ language | uppercase }}
+    </button>
+</mat-menu>
