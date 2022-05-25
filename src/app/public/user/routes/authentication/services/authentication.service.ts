@@ -87,12 +87,31 @@ export class AuthenticationService {
     })
   }
 
-  public signOut(signOutDTO: SignOutDTO): Observable<boolean> {
+  public signOut(): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
       const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_OUT}`;
 
       this._httpService
-        .updateOne<null, SignOutDTO>(routeURL, signOutDTO)
+        .updateOne<null, null>(routeURL, null)
+        .pipe(
+          catchError((error: Error) => {
+            observer.error(error);
+            return of(null);
+          })
+        )
+        .subscribe((data: UpdateResponseModel<null> | null) => {
+          observer.next(data !== null ? true : false);
+          return observer.complete();
+        });
+    })
+  }
+
+  public refreshToken(): Observable<boolean> {
+    return new Observable((observer: Observer<boolean>) => {
+      const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.REFRESH_TOKEN}`;
+
+      this._httpService
+        .updateOne<null, null>(routeURL, null)
         .pipe(
           catchError((error: Error) => {
             observer.error(error);
