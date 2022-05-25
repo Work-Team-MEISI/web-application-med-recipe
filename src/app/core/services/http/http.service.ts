@@ -43,12 +43,8 @@ export class HttpService {
 
   /** Update Methods */
 
-  public updateOneByParams<T, K, V>(routeURL: string, httpParams: K, httpBody: V): Observable<UpdateResponseModel<T>> {
-    return this._httpClient.put<UpdateResponseModel<T>>(`${this._serverURL}/${routeURL}`, { params: httpParams, body: httpBody });
-  }
-
-  public updateOneById<T, K>(routeURL: string, resourceId: string, httpBody: K): Observable<UpdateResponseModel<T>> {
-    return this._httpClient.put<UpdateResponseModel<T>>(`${this._serverURL}/${routeURL}/${resourceId}`, { body: httpBody });
+  public updateOne<T, V>(routeURL: string, httpBody: V): Observable<UpdateResponseModel<T>> {
+    return this._httpClient.put<UpdateResponseModel<T>>(`${this._serverURL}/${routeURL}`, { body: httpBody });
   }
 
   /** Delete Methods */
