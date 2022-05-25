@@ -1,7 +1,9 @@
 export class SignInDTO {
-    readonly username!: string;
-    readonly email!: string;
-    readonly firstName!: string;
-    readonly lastName!: string;
-    readonly password!: string;
+    public readonly email!: string;
+    public readonly password!: string;
+
+    public constructor(email: string, password: string) {
+        this.email = email;
+        this.password = password;
+    }
 }

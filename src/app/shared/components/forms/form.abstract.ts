@@ -2,8 +2,8 @@ import { FormControl, FormGroup, ValidatorFn, Validators } from "@angular/forms"
 import { FormControlModel } from "./models/form-control.model";
 
 export abstract class AbstractFormComponent {
-  private readonly _formControls: Array<FormControlModel>;
-  private readonly _formGroup: FormGroup = new FormGroup({});
+  protected readonly _formControls: Array<FormControlModel>;
+  protected readonly _formGroup: FormGroup = new FormGroup({});
 
   constructor(formControls: Array<FormControlModel>) {
     this._formControls = formControls;

@@ -5,7 +5,6 @@ import { LocalStorageService } from 'src/app/core/services/storage/local-storage
 import { PublicRoute } from 'src/app/shared/constants/public.route';
 import { TokenCollection } from 'src/app/shared/constants/token.collection';
 import { CreateResponseModel } from 'src/app/shared/models/response/create-response.model';
-import { FetchResponseModel } from 'src/app/shared/models/response/fetch-response.model';
 import { UpdateResponseModel } from 'src/app/shared/models/response/update-response.model';
 import { UserRoute } from '../../../constants/user.route';
 import { UserEntity } from '../../../entity/user.entity';
@@ -28,7 +27,7 @@ export class AuthenticationService {
 
   public signIn(signInDTO: SignInDTO): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
-      const routeURL = `/${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_IN}`;
+      const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_IN}`;
 
       this._httpService
         .createOne<TokenModel, SignInDTO>(routeURL, signInDTO)
@@ -52,7 +51,7 @@ export class AuthenticationService {
 
   public signUp(signUpDTO: SignUpDTO): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
-      const routeURL = `/${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_UP}`;
+      const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_UP}`;
 
       this._httpService
         .createOne<UserEntity, SignUpDTO>(routeURL, signUpDTO)
@@ -71,7 +70,7 @@ export class AuthenticationService {
 
   public forgotPassword(forgotPasswordDTO: ForgotPasswordDTO): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
-      const routeURL = `/${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.FORGOT_PASSWORD}`;
+      const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.FORGOT_PASSWORD}`;
 
       this._httpService
         .updateOne<UserEntity, ForgotPasswordDTO>(routeURL, forgotPasswordDTO)
@@ -90,7 +89,7 @@ export class AuthenticationService {
 
   public signOut(signOutDTO: SignOutDTO): Observable<boolean> {
     return new Observable((observer: Observer<boolean>) => {
-      const routeURL = `/${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_OUT}`;
+      const routeURL = `${PublicRoute.USERS}/${UserRoute.AUTHENTICATION}/${AuthenticationRoute.SIGN_OUT}`;
 
       this._httpService
         .updateOne<null, SignOutDTO>(routeURL, signOutDTO)

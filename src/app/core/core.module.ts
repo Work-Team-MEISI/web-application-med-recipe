@@ -24,7 +24,7 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
     CookieStorageService,
     LocaleService,
     LocalizationService,
-    ThemeService
+    ThemeService,
   ],
   exports: [
     AngularMaterialModule,

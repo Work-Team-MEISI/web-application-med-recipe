@@ -38,13 +38,13 @@ export class HttpService {
   /** Create Methods */
 
   public createOne<T, K>(routeURL: string, httpBody: K): Observable<CreateResponseModel<T>> {
-    return this._httpClient.post<CreateResponseModel<T>>(`${this._serverURL}/${routeURL}`, { body: httpBody });
+    return this._httpClient.post<CreateResponseModel<T>>(`${this._serverURL}/${routeURL}`, httpBody);
   }
 
   /** Update Methods */
 
   public updateOne<T, V>(routeURL: string, httpBody: V): Observable<UpdateResponseModel<T>> {
-    return this._httpClient.put<UpdateResponseModel<T>>(`${this._serverURL}/${routeURL}`, { body: httpBody });
+    return this._httpClient.put<UpdateResponseModel<T>>(`${this._serverURL}/${routeURL}`, httpBody);
   }
 
   /** Delete Methods */

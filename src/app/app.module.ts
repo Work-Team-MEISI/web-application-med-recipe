@@ -29,7 +29,7 @@ import { PublicModule } from './public/public.module';
       },
     }),
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [TranslateStore],
   bootstrap: [AppComponent]
