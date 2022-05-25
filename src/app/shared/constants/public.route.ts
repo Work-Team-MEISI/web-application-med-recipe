@@ -4,5 +4,8 @@ export enum PublicRoute {
 
     /** Public Module */
     PUBLIC = "public",
-    USERS = "users"
+
+    /** Public Routes Modules */
+    USERS = "users",
+    PATIENT = "patients"
 }

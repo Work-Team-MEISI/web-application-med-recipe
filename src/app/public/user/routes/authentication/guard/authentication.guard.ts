@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, Router, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { JwtService } from 'src/app/core/services/jwt/jwt.service';
 import { PublicRoute } from 'src/app/shared/constants/public.route';
@@ -15,9 +15,7 @@ export class AuthenticationGuard implements CanActivate {
     private readonly _router: Router,
   ) { }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const isTokenExpired: boolean = this._jwtService.isAccessTokenExpired();
 
     if (isTokenExpired === true) {

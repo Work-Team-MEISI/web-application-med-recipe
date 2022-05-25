@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthenticationInterceptor } from './interceptor/authentication.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthenticationGuard } from './guard/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
       useClass: AuthenticationInterceptor,
       multi: true,
     },
+    AuthenticationGuard,
   ]
 })
 export class AuthenticationModule { }
