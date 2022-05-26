@@ -19,6 +19,10 @@ export class HttpService {
 
   /** Fetch Methods */
 
+  public fetchBulk<T>(routeURL: string): Observable<Array<FetchResponseModel<T>>> {
+    return this._httpClient.get<Array<FetchResponseModel<T>>>(`${this._serverURL}/${routeURL}`);
+  }
+
   public fetchBulkByParams<T>(routeURL: string, httpParams: HttpParams): Observable<Array<FetchResponseModel<T>>> {
     return this._httpClient.get<Array<FetchResponseModel<T>>>(`${this._serverURL}/${routeURL}`, { params: httpParams });
   }

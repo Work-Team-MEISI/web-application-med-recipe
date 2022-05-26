@@ -4,8 +4,6 @@ import { UserRoutingModule } from './user-routing.module';
 import { AuthenticationModule } from './routes/authentication/authentication.module';
 import { ProfileModule } from './routes/profile/profile.module';
 
-
-
 @NgModule({
   declarations: [],
   imports: [

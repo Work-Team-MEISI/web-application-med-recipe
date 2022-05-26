@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="inner-container">
+        <div class="row" *ngFor="let citizen of this.citizens">
+            <div class="col">
+                <span> {{ citizen.citizenId }} </span>
+            </div>
+            <div class="col">
+                <span> {{ citizen.socialSecurityId }} </span>
+            </div>
+            <div class="col">
+                <span> {{ citizen.healthSecurityId }} </span>
+            </div>
+            <div class="col">
+                <span> {{ citizen.firstName }} {{citizen.lastName}} </span>
+            </div>
+            <div class="col">
+                <span> {{ citizen.dateOfBirth }} </span>
+            </div>
+        </div>
+    </div>
+</div>
