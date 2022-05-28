@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthenticationInterceptor } from './interceptor/authentication.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthenticationGuard } from './guard/authentication.guard';
+import { AuthenticatedGuard } from './guard/authenticated.guard';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AuthenticationGuard } from './guard/authentication.guard';
       multi: true,
     },
     AuthenticationGuard,
+    AuthenticatedGuard
   ]
 })
 export class AuthenticationModule { }

@@ -7,5 +7,5 @@ export enum PublicRoute {
 
     /** Public Routes Modules */
     USERS = "users",
-    PATIENT = "patients"
+    CITIZENS = "citizens"
 }

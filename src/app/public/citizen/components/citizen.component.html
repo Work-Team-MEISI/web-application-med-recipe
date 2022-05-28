@@ -2,19 +2,47 @@
     <div class="inner-container">
         <div class="row" *ngFor="let citizen of this.citizens">
             <div class="col">
-                <span> {{ citizen.citizenId }} </span>
+                <div class="row"> Citizen Identifier </div>
+                <div class="row">
+                    <span> <strong># {{ citizen.citizenId }}</strong> </span>
+                </div>
             </div>
+            <div class="divider"></div>
             <div class="col">
-                <span> {{ citizen.socialSecurityId }} </span>
+                <div class="row"> Social Security Identifier </div>
+                <div class="row">
+                    <span> <strong># {{ citizen.socialSecurityId }}</strong> </span>
+                </div>
             </div>
+            <div class="divider"></div>
             <div class="col">
-                <span> {{ citizen.healthSecurityId }} </span>
+                <div class="row"> Health Security Identifier </div>
+                <div class="row">
+                    <span> <strong># {{ citizen.healthSecurityId }}</strong> </span>
+                </div>
             </div>
+            <div class="divider"></div>
             <div class="col">
-                <span> {{ citizen.firstName }} {{citizen.lastName}} </span>
+                <div class="row"> Citizen Name </div>
+                <div class="row">
+                    <span> {{ citizen.firstName }} {{citizen.lastName}} </span>
+                </div>
             </div>
+            <div class="divider"></div>
             <div class="col">
-                <span> {{ citizen.dateOfBirth }} </span>
+                <div class="row"> Citizen Date of Birth </div>
+                <div class="row">
+                    <span> {{ citizen.dateOfBirth }} </span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="col">
+                <div class="row">
+                    <fa-icon [icon]="this.iconService.userIcon"></fa-icon>
+                </div>
+                <div class="row">
+                    <fa-icon [icon]="this.iconService.kitMedicationIcon"></fa-icon>
+                </div>
             </div>
         </div>
     </div>

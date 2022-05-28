@@ -19,7 +19,7 @@ export class JwtService {
     const accessToken = this._storageService.fetchToken<string>(TokenCollection.ACCESS_TOKEN);
 
     if (accessToken === null) {
-      return false;
+      return true;
     }
 
     return this._jwtHelper.isTokenExpired(accessToken);
@@ -30,7 +30,7 @@ export class JwtService {
     const refreshToken = this._storageService.fetchToken<string>(TokenCollection.REFRESH_TOKEN);
 
     if (refreshToken === null) {
-      return false;
+      return true;
     }
 
     return this._jwtHelper.isTokenExpired(refreshToken);

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faGlobe, faLightbulb, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faKitMedical, faLightbulb, faUser } from '@fortawesome/free-solid-svg-icons';
 import { IconCollection } from 'src/app/shared/constants/icon.collection';
 import { IconModel } from 'src/app/shared/models/icon.model';
 
@@ -24,6 +24,10 @@ export class IconService {
         name: IconCollection.USER,
         definition: faUser
       },
+      {
+        name: IconCollection.KIT_MEDICATION,
+        definition: faKitMedical,
+      }
     );
   }
 
@@ -45,5 +49,9 @@ export class IconService {
 
   public get userIcon(): IconDefinition {
     return this._fetchIconDefinition(IconCollection.USER);
+  }
+
+  public get kitMedicationIcon(): IconDefinition {
+    return this._fetchIconDefinition(IconCollection.KIT_MEDICATION)
   }
 }

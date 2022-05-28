@@ -16,6 +16,7 @@ export class SignInComponent extends AbstractFormComponent implements OnInit {
   constructor(
     private readonly _localeService: LocaleService,
     private readonly _authenticationService: AuthenticationService,
+    private readonly _router: Router,
   ) {
     super([
       { name: "email", default: "", rules: ['required'] },
@@ -33,7 +34,9 @@ export class SignInComponent extends AbstractFormComponent implements OnInit {
     const controls = this._formGroup.controls;
     const signInDTO: SignInDTO = new SignInDTO(controls['email'].value, controls['password'].value);
 
-    this._authenticationService.signIn(signInDTO).subscribe();
+    this._authenticationService.signIn(signInDTO).subscribe(() => {
+      this._router.navigate([`/${PublicRoute.PUBLIC}/${PublicRoute.CITIZENS}`])
+    });
   }
 
 }
